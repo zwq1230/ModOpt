@@ -1,0 +1,987 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1.4.1.1. modopt.opt.algorithms module &mdash; modopt 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.1.4.1.2. modopt.opt.cost module" href="modopt.opt.cost.html" />
+    <link rel="prev" title="1.1.4. modopt.opt package" href="modopt.opt.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> modopt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modopt.html">1. modopt package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="modopt.base.html">1.1.1. modopt.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.np_adjust.html">1.1.1.1.1. modopt.base.np_adjust module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.observable.html">1.1.1.1.2. modopt.base.observable module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.transform.html">1.1.1.1.3. modopt.base.transform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.types.html">1.1.1.1.4. modopt.base.types module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.wrappers.html">1.1.1.1.5. modopt.base.wrappers module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.interface.html">1.1.2. modopt.interface package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.errors.html">1.1.2.1.1. modopt.interface.errors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.log.html">1.1.2.1.2. modopt.interface.log module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.math.html">1.1.3. modopt.math package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.convolve.html">1.1.3.1.1. modopt.math.convolve module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.matrix.html">1.1.3.1.2. modopt.math.matrix module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.metrics.html">1.1.3.1.3. modopt.math.metrics module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.stats.html">1.1.3.1.4. modopt.math.stats module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="modopt.opt.html">1.1.4. modopt.opt package</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.4.1.1. modopt.opt.algorithms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.cost.html">1.1.4.1.2. modopt.opt.cost module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.gradient.html">1.1.4.1.3. modopt.opt.gradient module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.linear.html">1.1.4.1.4. modopt.opt.linear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.proximity.html">1.1.4.1.5. modopt.opt.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.reweight.html">1.1.4.1.6. modopt.opt.reweight module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.plot.html">1.1.5. modopt.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.plot.cost_plot.html">1.1.5.1.1. modopt.plot.cost_plot module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.signal.html">1.1.6. modopt.signal package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.filter.html">1.1.6.1.1. modopt.signal.filter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.noise.html">1.1.6.1.2. modopt.signal.noise module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.positivity.html">1.1.6.1.3. modopt.signal.positivity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.svd.html">1.1.6.1.4. modopt.signal.svd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.validation.html">1.1.6.1.5. modopt.signal.validation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.wavelet.html">1.1.6.1.6. modopt.signal.wavelet module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.info.html">1.2.1. modopt.info module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">2. modopt examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin_example.html">2.1. Plugin Example</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">modopt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modopt.html"><span class="section-number">1. </span>modopt package</a> &raquo;</li>
+        
+          <li><a href="modopt.opt.html"><span class="section-number">1.1.4. </span>modopt.opt package</a> &raquo;</li>
+        
+      <li><span class="section-number">1.1.4.1.1. </span>modopt.opt.algorithms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modopt.opt.algorithms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-modopt.opt.algorithms">
+<span id="modopt-opt-algorithms-module"></span><h1><span class="section-number">1.1.4.1.1. </span>modopt.opt.algorithms module<a class="headerlink" href="#module-modopt.opt.algorithms" title="Permalink to this headline">¶</a></h1>
+<p>OPTIMISATION ALGOTITHMS</p>
+<p>This module contains class implementations of various optimisation algoritms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Samuel Farrens &lt;<a class="reference external" href="mailto:samuel&#46;farrens&#37;&#52;&#48;cea&#46;fr">samuel<span>&#46;</span>farrens<span>&#64;</span>cea<span>&#46;</span>fr</a>&gt;,
+Zaccharie Ramzi &lt;<a class="reference external" href="mailto:zaccharie&#46;ramzi&#37;&#52;&#48;cea&#46;fr">zaccharie<span>&#46;</span>ramzi<span>&#64;</span>cea<span>&#46;</span>fr</a>&gt;</p>
+</dd>
+<dt class="field-even">Notes</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<p>Input classes must have the following properties:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Gradient Operators</strong></p></li>
+</ul>
+<p>Must have the following methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_grad()</span></code> - calculate the gradient</p></li>
+</ul>
+</div></blockquote>
+<p>Must have the following variables:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">grad</span></code> - the gradient</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Linear Operators</strong></p></li>
+</ul>
+<p>Must have the following methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">op()</span></code> - operator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adj_op()</span></code> - adjoint operator</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Proximity Operators</strong></p></li>
+</ul>
+<p>Must have the following methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">op()</span></code> - operator</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>The following notation is used to implement the algorithms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>x_old is used in place of <span class="math notranslate nohighlight">\(x_{n}\)</span>.</p></li>
+<li><p>x_new is used in place of <span class="math notranslate nohighlight">\(x_{n+1}\)</span>.</p></li>
+<li><p>x_prox is used in place of <span class="math notranslate nohighlight">\(\tilde{x}_{n+1}\)</span>.</p></li>
+<li><p>x_temp is used for intermediate operations.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">References</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p id="bibtex-bibliography-modopt.opt.algorithms-0"><dl class="citation">
+<dt class="bibtex label" id="bauschke2009"><span class="brackets">BBCL09</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>Heinz Bauschke, Regina Burachik, Patrick Combettes, and D. Luke. <em>Fixed-Point Algorithms for Inverse Problems in Science and Engineering</em>. Springer, 11 2009. URL: <a class="reference external" href="https://www.springer.com/gp/book/9781441995681">https://www.springer.com/gp/book/9781441995681</a>.</p>
+</dd>
+<dt class="bibtex label" id="chambolle2015"><span class="brackets"><a class="fn-backref" href="#id2">CD15</a></span></dt>
+<dd><p>Antonin Chambolle and Charles Dossal. On the convergence of the iterates of “FISTA”. <em>Journal of Optimization Theory and Applications</em>, Volume 166(Issue 3):25, August 2015. URL: <a class="reference external" href="https://hal.inria.fr/hal-01060130">https://hal.inria.fr/hal-01060130</a>.</p>
+</dd>
+<dt class="bibtex label" id="condat2013"><span class="brackets">Con13</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id13">2</a>)</span></dt>
+<dd><p>Laurent Condat. A primal–dual splitting method for convex optimization involving lipschitzian, proximable and linear composite terms. <em>Journal of Optimization Theory and Applications</em>, 158:, 08 2013. <a class="reference external" href="https://doi.org/10.1007/s10957-012-0245-9">doi:10.1007/s10957-012-0245-9</a>.</p>
+</dd>
+<dt class="bibtex label" id="kim2017"><span class="brackets">KF17</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id15">2</a>,<a href="#id16">3</a>)</span></dt>
+<dd><p>Donghwan Kim and Jeffrey A. Fessler. Adaptive restart of the optimized gradient method for convex optimization. <em>arXiv e-prints</em>, pages arXiv:1703.04641, Mar 2017. <a class="reference external" href="https://arxiv.org/abs/1703.04641">arXiv:1703.04641</a>.</p>
+</dd>
+<dt class="bibtex label" id="liang2018"><span class="brackets">LLS18</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id7">6</a>)</span></dt>
+<dd><p>Jingwei Liang, Tao Luo, and Carola-Bibiane Schonlieb. Improving fast iterative shrinkage-thresholding algorithm: faster, smarter and greedier. <em>arXiv e-prints</em>, pages arXiv:1811.01430, Nov 2018. <a class="reference external" href="https://arxiv.org/abs/1811.01430">arXiv:1811.01430</a>.</p>
+</dd>
+<dt class="bibtex label" id="raguet2011"><span class="brackets">RFPeyre11</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id11">2</a>)</span></dt>
+<dd><p>Hugo Raguet, Jalal Fadili, and Gabriel Peyré. Generalized forward-backward splitting. <em>arXiv e-prints</em>, pages arXiv:1108.4404, Aug 2011. <a class="reference external" href="https://arxiv.org/abs/1108.4404">arXiv:1108.4404</a>.</p>
+</dd>
+</dl>
+</p>
+<dl class="class">
+<dt id="modopt.opt.algorithms.SetUp">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">SetUp</code><span class="sig-paren">(</span><em class="sig-param">metric_call_period=5</em>, <em class="sig-param">metrics={}</em>, <em class="sig-param">verbose=False</em>, <em class="sig-param">progress=True</em>, <em class="sig-param">step_size=None</em>, <em class="sig-param">**dummy_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="modopt.base.observable.html#modopt.base.observable.Observable" title="modopt.base.observable.Observable"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.base.observable.Observable</span></code></a></p>
+<p>Algorithm Set-Up</p>
+<p>This class contains methods for checking the set-up of an optimisation
+algotithm and produces warnings if they do not comply.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metric_call_period</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Metric call period (default is <code class="docutils literal notranslate"><span class="pre">5</span></code>)</p></li>
+<li><p><strong>metrics</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a><em>, </em><em>optional</em>) – Metrics to be used (default is <code class="docutils literal notranslate"><span class="pre">{}</span></code>)</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option for verbose output (default is <code class="docutils literal notranslate"><span class="pre">False</span></code>)</p></li>
+<li><p><strong>progress</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option to display progress bar (default is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>step_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Generic step size parameter to override default algorithm
+parameter name (<cite>e.g.</cite> <cite>step_size</cite> will override the value set for
+<cite>beta_param</cite> in <cite>ForwardBackward</cite>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp.any_convergence_flag">
+<code class="sig-name descname">any_convergence_flag</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp.any_convergence_flag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp.any_convergence_flag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check convergence flag</p>
+<p>Return if any matrices values matched the convergence criteria.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._check_input_data">
+<code class="sig-name descname">_check_input_data</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._check_input_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._check_input_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check input data type</p>
+<p>This method checks if the input data is a numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – For invalid input type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._check_param">
+<code class="sig-name descname">_check_param</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">param</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._check_param"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._check_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check algorithm parameters</p>
+<p>This method checks if the specified algorithm parameters are floats</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Parameter value</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – For invalid input type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._check_param_update">
+<code class="sig-name descname">_check_param_update</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">param_update</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._check_param_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._check_param_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check algorithm parameter update methods</p>
+<p>This method checks if the specified algorithm parameters are floats</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_update</strong> (<em>function</em>) – Callable function</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – For invalid input type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._check_operator">
+<code class="sig-name descname">_check_operator</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">operator</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._check_operator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._check_operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check set-Up</p>
+<p>This method checks algorithm operator against the expected parent
+classes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Algorithm operator to check</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._compute_metrics">
+<code class="sig-name descname">_compute_metrics</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._compute_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._compute_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute metrics during iteration</p>
+<p>This method create the args necessary for metrics computation, then
+call the observers to compute metrics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._iterations">
+<code class="sig-name descname">_iterations</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter</em>, <em class="sig-param">bar=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._iterations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Maximum number of iterations</p></li>
+<li><p><strong>bar</strong> (<em>progressbar.ProgressBar</em>) – Progress bar (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.SetUp._run_alg">
+<code class="sig-name descname">_run_alg</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#SetUp._run_alg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.SetUp._run_alg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run algorithm</p>
+<p>Run the update step of a given algorithm up to the maximum number of
+iterations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Maximum number of iterations</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.algorithms.FISTA">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">FISTA</code><span class="sig-paren">(</span><em class="sig-param">restart_strategy=None</em>, <em class="sig-param">min_beta=None</em>, <em class="sig-param">s_greedy=None</em>, <em class="sig-param">xi_restart=None</em>, <em class="sig-param">a_cd=None</em>, <em class="sig-param">p_lazy=1</em>, <em class="sig-param">q_lazy=1</em>, <em class="sig-param">r_lazy=4</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#FISTA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.FISTA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class is inherited by optimisation classes to speed up convergence
+The parameters for the modified FISTA are as described in <a class="bibtex reference internal" href="#liang2018" id="id1">[LLS18]</a>
+(p, q, r)_lazy or in <a class="bibtex reference internal" href="#chambolle2015" id="id2">[CD15]</a> (a_cd).
+The restarting strategies are those described in <a class="bibtex reference internal" href="#liang2018" id="id3">[LLS18]</a>,
+algorithms 4-5.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>restart_strategy</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – name of the restarting strategy. If None, there is no restarting.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>min_beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – the minimum beta when using the greedy restarting strategy.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>s_greedy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – parameter for the safeguard comparison in the greedy restarting
+strategy. It has to be &gt; 1.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>xi_restart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – mutlitplicative parameter for the update of beta in the greedy
+restarting strategy and for the update of r_lazy in the adaptive
+restarting strategies. It has to be &gt; 1.
+(Default is None)</p></li>
+<li><p><strong>a_cd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – parameter for the update of lambda in Chambolle-Dossal mode. If None
+the mode of the algorithm is the regular FISTA, else the mode is
+Chambolle-Dossal. It has to be &gt; 2.</p></li>
+<li><p><strong>p_lazy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – parameter for the update of lambda in Fista-Mod. It has to be in
+]0, 1].</p></li>
+<li><p><strong>q_lazy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – parameter for the update of lambda in Fista-Mod. It has to be in
+]0, (2-p)**2].</p></li>
+<li><p><strong>r_lazy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – parameter for the update of lambda in Fista-Mod. It has to be in
+]0, 4].</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="modopt.opt.algorithms.FISTA._check_restart_params">
+<code class="sig-name descname">_check_restart_params</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">restart_strategy</em>, <em class="sig-param">min_beta</em>, <em class="sig-param">s_greedy</em>, <em class="sig-param">xi_restart</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#FISTA._check_restart_params"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.FISTA._check_restart_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check restarting parameters</p>
+<p>This method checks that the restarting parameters are set and satisfy
+the correct assumptions. It also checks that the current mode is
+regular (as opposed to CD for now).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>restart_strategy</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – name of the restarting strategy. If None, there is no restarting.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>min_beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – the minimum beta when using the greedy restarting strategy.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>s_greedy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – parameter for the safeguard comparison in the greedy restarting
+strategy. It has to be &gt; 1.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>xi_restart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – mutlitplicative parameter for the update of beta in the greedy
+restarting strategy and for the update of r_lazy in the adaptive
+restarting strategies. It has to be &gt; 1.
+(Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – When a parameter that should be set isn’t or doesn’t verify the
+correct assumptions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.FISTA.is_restart">
+<code class="sig-name descname">is_restart</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">z_old</em>, <em class="sig-param">x_new</em>, <em class="sig-param">x_old</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#FISTA.is_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.FISTA.is_restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the algorithm needs to restart</p>
+<p>This method implements the checks necessary to tell whether the
+algorithm needs to restart depending on the restarting strategy.
+It also updates the FISTA parameters according to the restarting
+strategy (namely beta and r).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z_old</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Corresponds to y_n in <a class="bibtex reference internal" href="#liang2018" id="id4">[LLS18]</a>.</p></li>
+<li><p><strong>x_new</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Corresponds to x_{n+1} in <a class="bibtex reference internal" href="#liang2018" id="id5">[LLS18]</a>.</p></li>
+<li><p><strong>x_old</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Corresponds to x_n in <a class="bibtex reference internal" href="#liang2018" id="id6">[LLS18]</a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether the algorithm should restart</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Implements restarting and safeguarding steps in alg 4-5 o
+<a class="bibtex reference internal" href="#liang2018" id="id7">[LLS18]</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.FISTA.update_beta">
+<code class="sig-name descname">update_beta</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">beta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#FISTA.update_beta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.FISTA.update_beta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update beta</p>
+<p>This method updates beta only in the case of safeguarding (should only
+be done in the greedy restarting strategy).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – The beta parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new value for the beta parameter</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.FISTA.update_lambda">
+<code class="sig-name descname">update_lambda</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#FISTA.update_lambda"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.FISTA.update_lambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update lambda</p>
+<p>This method updates the value of lambda</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Current lambda value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Implements steps 3 and 4 from algoritm 10.7 in <a class="bibtex reference internal" href="#bauschke2009" id="id8">[BBCL09]</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.algorithms.ForwardBackward">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">ForwardBackward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">grad</em>, <em class="sig-param">prox</em>, <em class="sig-param">cost='auto'</em>, <em class="sig-param">beta_param=1.0</em>, <em class="sig-param">lambda_param=1.0</em>, <em class="sig-param">beta_update=None</em>, <em class="sig-param">lambda_update='fista'</em>, <em class="sig-param">auto_iterate=True</em>, <em class="sig-param">metric_call_period=5</em>, <em class="sig-param">metrics={}</em>, <em class="sig-param">linear=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.algorithms.SetUp</span></code></a></p>
+<p>Forward-Backward optimisation</p>
+<p>This class implements standard forward-backward optimisation with an the
+option to use the FISTA speed-up</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the primal variable</p></li>
+<li><p><strong>grad</strong> (<em>class</em>) – Gradient operator class</p></li>
+<li><p><strong>prox</strong> (<em>class</em>) – Proximity operator class</p></li>
+<li><p><strong>cost</strong> (<em>class</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Cost function class (default is ‘auto’); Use ‘auto’ to automatically
+generate a costObj instance</p></li>
+<li><p><strong>beta_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Initial value of the beta parameter (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>lambda_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Initial value of the lambda parameter (default is <code class="docutils literal notranslate"><span class="pre">`1.0</span></code>)</p></li>
+<li><p><strong>beta_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Beta parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>lambda_update</strong> (<em>function</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Lambda parameter update method (default is ‘fista’)</p></li>
+<li><p><strong>auto_iterate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option to automatically begin iterations upon initialisation (default
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The <cite>beta_param</cite> can also be set using the keyword <cite>step_size</cite>, which will
+override the value of <cite>beta_param</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.algorithms.FISTA" title="modopt.opt.algorithms.FISTA"><code class="xref py py-class docutils literal notranslate"><span class="pre">FISTA</span></code></a></dt><dd><p>complementary class</p>
+</dd>
+<dt><a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetUp</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.algorithms.ForwardBackward._update_param">
+<code class="sig-name descname">_update_param</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward._update_param"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward._update_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parameters</p>
+<p>This method updates the values of the algorthm parameters with the
+methods provided</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.ForwardBackward._update">
+<code class="sig-name descname">_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward._update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward._update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+<p>This method updates the current reconstruction</p>
+<p class="rubric">Notes</p>
+<p>Implements algorithm 10.7 (or 10.5) from <a class="bibtex reference internal" href="#bauschke2009" id="id9">[BBCL09]</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.ForwardBackward.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter=150</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward.iterate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate</p>
+<p>This method calls update until either convergence criteria is met or
+the maximum number of iterations is reached</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Maximum number of iterations (default is <code class="docutils literal notranslate"><span class="pre">150</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.ForwardBackward.get_notify_observers_kwargs">
+<code class="sig-name descname">get_notify_observers_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward.get_notify_observers_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward.get_notify_observers_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify observers</p>
+<p>Return the mapping between the metrics call and the iterated
+variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mapping between the iterated variables</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.ForwardBackward.retrieve_outputs">
+<code class="sig-name descname">retrieve_outputs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#ForwardBackward.retrieve_outputs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.ForwardBackward.retrieve_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retireve outputs</p>
+<p>Declare the outputs of the algorithms as attributes: x_final,
+y_final, metrics.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.algorithms.GenForwardBackward">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">GenForwardBackward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">grad</em>, <em class="sig-param">prox_list</em>, <em class="sig-param">cost='auto'</em>, <em class="sig-param">gamma_param=1.0</em>, <em class="sig-param">lambda_param=1.0</em>, <em class="sig-param">gamma_update=None</em>, <em class="sig-param">lambda_update=None</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">auto_iterate=True</em>, <em class="sig-param">metric_call_period=5</em>, <em class="sig-param">metrics={}</em>, <em class="sig-param">linear=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.algorithms.SetUp</span></code></a></p>
+<p>Generalized Forward-Backward Algorithm</p>
+<p>This class implements algorithm 1 from <a class="bibtex reference internal" href="#raguet2011" id="id10">[RFPeyre11]</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the primal variable</p></li>
+<li><p><strong>grad</strong> (<em>class instance</em>) – Gradient operator class</p></li>
+<li><p><strong>prox_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – List of proximity operator class instances</p></li>
+<li><p><strong>cost</strong> (<em>class</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Cost function class (default is ‘auto’); Use ‘auto’ to automatically
+generate a costObj instance</p></li>
+<li><p><strong>gamma_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Initial value of the gamma parameter (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>lambda_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Initial value of the lambda parameter (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>gamma_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Gamma parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>lambda_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Lambda parameter parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a><em>, </em><em>optional</em>) – Proximity operator weights (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>auto_iterate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option to automatically begin iterations upon initialisation (default
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The <cite>gamma_param</cite> can also be set using the keyword <cite>step_size</cite>, which will
+override the value of <cite>gamma_param</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetUp</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward._set_weights">
+<code class="sig-name descname">_set_weights</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">weights</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward._set_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward._set_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set weights</p>
+<p>This method sets weights on each of the proximty operators provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – List of weights</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – For invalid input type</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – If weights do not sum to one</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward._update_param">
+<code class="sig-name descname">_update_param</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward._update_param"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward._update_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parameters</p>
+<p>This method updates the values of the algorthm parameters with the
+methods provided</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward._update">
+<code class="sig-name descname">_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward._update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward._update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+<p>This method updates the current reconstruction</p>
+<p class="rubric">Notes</p>
+<p>Implements algorithm 1 from <a class="bibtex reference internal" href="#raguet2011" id="id11">[RFPeyre11]</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter=150</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward.iterate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate</p>
+<p>This method calls update until either convergence criteria is met or
+the maximum number of iterations is reached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Maximum number of iterations (default is <code class="docutils literal notranslate"><span class="pre">150</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward.get_notify_observers_kwargs">
+<code class="sig-name descname">get_notify_observers_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward.get_notify_observers_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward.get_notify_observers_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify observers</p>
+<p>Return the mapping between the metrics call and the iterated
+variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mapping between the iterated variables</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.GenForwardBackward.retrieve_outputs">
+<code class="sig-name descname">retrieve_outputs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#GenForwardBackward.retrieve_outputs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.GenForwardBackward.retrieve_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve outputs</p>
+<p>Declare the outputs of the algorithms as attributes: x_final,
+y_final, metrics.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.algorithms.Condat">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">Condat</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">grad</em>, <em class="sig-param">prox</em>, <em class="sig-param">prox_dual</em>, <em class="sig-param">linear=None</em>, <em class="sig-param">cost='auto'</em>, <em class="sig-param">reweight=None</em>, <em class="sig-param">rho=0.5</em>, <em class="sig-param">sigma=1.0</em>, <em class="sig-param">tau=1.0</em>, <em class="sig-param">rho_update=None</em>, <em class="sig-param">sigma_update=None</em>, <em class="sig-param">tau_update=None</em>, <em class="sig-param">auto_iterate=True</em>, <em class="sig-param">max_iter=150</em>, <em class="sig-param">n_rewightings=1</em>, <em class="sig-param">metric_call_period=5</em>, <em class="sig-param">metrics={}</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.algorithms.SetUp</span></code></a></p>
+<p>Condat optimisation</p>
+<p>This class implements algorithm 3.1 from <a class="bibtex reference internal" href="#condat2013" id="id12">[Con13]</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the primal variable</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the dual variable</p></li>
+<li><p><strong>grad</strong> (<em>class instance</em>) – Gradient operator class</p></li>
+<li><p><strong>prox</strong> (<em>class instance</em>) – Proximity primal operator class</p></li>
+<li><p><strong>prox_dual</strong> (<em>class instance</em>) – Proximity dual operator class</p></li>
+<li><p><strong>linear</strong> (<em>class instance</em><em>, </em><em>optional</em>) – Linear operator class (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>cost</strong> (<em>class</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Cost function class (default is ‘auto’); Use ‘auto’ to automatically
+generate a costObj instance</p></li>
+<li><p><strong>reweight</strong> (<em>class instance</em><em>, </em><em>optional</em>) – Reweighting class</p></li>
+<li><p><strong>rho</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Relaxation parameter (default is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>)</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Proximal dual parameter (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Proximal primal paramater (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>rho_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Relaxation parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>sigma_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Proximal dual parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>tau_update</strong> (<em>function</em><em>, </em><em>optional</em>) – Proximal primal parameter update method (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>auto_iterate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option to automatically begin iterations upon initialisation (default
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Maximum number of iterations (default is <code class="docutils literal notranslate"><span class="pre">150</span></code>)</p></li>
+<li><p><strong>n_rewightings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Number of reweightings to perform (default is <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The <cite>tau_param</cite> can also be set using the keyword <cite>step_size</cite>, which will
+override the value of <cite>tau_param</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetUp</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.algorithms.Condat._update_param">
+<code class="sig-name descname">_update_param</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat._update_param"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat._update_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update parameters</p>
+<p>This method updates the values of the algorthm parameters with the
+methods provided</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.Condat._update">
+<code class="sig-name descname">_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat._update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat._update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+<p>This method updates the current reconstruction</p>
+<p class="rubric">Notes</p>
+<p>Implements equation 9 (algorithm 3.1) from <a class="bibtex reference internal" href="#condat2013" id="id13">[Con13]</a></p>
+<ul class="simple">
+<li><p>primal proximity operator set up for positivity constraint</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.Condat.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter=150</em>, <em class="sig-param">n_rewightings=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat.iterate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate</p>
+<p>This method calls update until either convergence criteria is met or
+the maximum number of iterations is reached</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Maximum number of iterations (default is <code class="docutils literal notranslate"><span class="pre">150</span></code>)</p></li>
+<li><p><strong>n_rewightings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Number of reweightings to perform (default is <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.Condat.get_notify_observers_kwargs">
+<code class="sig-name descname">get_notify_observers_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat.get_notify_observers_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat.get_notify_observers_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify observers</p>
+<p>Return the mapping between the metrics call and the iterated
+variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>notify_observers_kwargs</strong> – The mapping between the iterated variables</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a>,</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.Condat.retrieve_outputs">
+<code class="sig-name descname">retrieve_outputs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#Condat.retrieve_outputs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.Condat.retrieve_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve outputs</p>
+<p>Declare the outputs of the algorithms as attributes: x_final,
+y_final, metrics.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.algorithms.POGM">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.algorithms.</code><code class="sig-name descname">POGM</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">z</em>, <em class="sig-param">grad</em>, <em class="sig-param">prox</em>, <em class="sig-param">cost='auto'</em>, <em class="sig-param">linear=None</em>, <em class="sig-param">beta_param=1.0</em>, <em class="sig-param">sigma_bar=1.0</em>, <em class="sig-param">auto_iterate=True</em>, <em class="sig-param">metric_call_period=5</em>, <em class="sig-param">metrics={}</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#POGM"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.POGM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.algorithms.SetUp</span></code></a></p>
+<p>Proximal Optimised Gradient Method</p>
+<p>This class implements algorithm 3 from <a class="bibtex reference internal" href="#kim2017" id="id14">[KF17]</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the u variable</p></li>
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the x variable (primal)</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the y variable</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Initial guess for the z variable</p></li>
+<li><p><strong>grad</strong> (<em>class</em>) – Gradient operator class</p></li>
+<li><p><strong>prox</strong> (<em>class</em>) – Proximity operator class</p></li>
+<li><p><strong>cost</strong> (<em>class</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Cost function class (default is ‘auto’); Use ‘auto’ to automatically
+generate a costObj instance</p></li>
+<li><p><strong>linear</strong> (<em>class instance</em><em>, </em><em>optional</em>) – Linear operator class (default is <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>beta_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Initial value of the beta parameter (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>).
+This corresponds to (1 / L) in <a class="bibtex reference internal" href="#kim2017" id="id15">[KF17]</a></p></li>
+<li><p><strong>sigma_bar</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Value of the shrinking parameter sigma bar (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+<li><p><strong>auto_iterate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Option to automatically begin iterations upon initialisation (default
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The <cite>beta_param</cite> can also be set using the keyword <cite>step_size</cite>, which will
+override the value of <cite>beta_param</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.algorithms.SetUp" title="modopt.opt.algorithms.SetUp"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetUp</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.algorithms.POGM._update">
+<code class="sig-name descname">_update</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#POGM._update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.POGM._update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update</p>
+<p>This method updates the current reconstruction</p>
+<p class="rubric">Notes</p>
+<p>Implements algorithm 3 from <a class="bibtex reference internal" href="#kim2017" id="id16">[KF17]</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.POGM.iterate">
+<code class="sig-name descname">iterate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">max_iter=150</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#POGM.iterate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.POGM.iterate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate</p>
+<p>This method calls update until either convergence criteria is met or
+the maximum number of iterations is reached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>max_iter</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Maximum number of iterations (default is <code class="docutils literal notranslate"><span class="pre">150</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.POGM.get_notify_observers_kwargs">
+<code class="sig-name descname">get_notify_observers_kwargs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#POGM.get_notify_observers_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.POGM.get_notify_observers_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify observers</p>
+<p>Return the mapping between the metrics call and the iterated
+variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mapping between the iterated variables</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.algorithms.POGM.retrieve_outputs">
+<code class="sig-name descname">retrieve_outputs</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/algorithms.html#POGM.retrieve_outputs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.algorithms.POGM.retrieve_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve outputs</p>
+<p>Declare the outputs of the algorithms as attributes: x_final,
+y_final, metrics.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modopt.opt.cost.html" class="btn btn-neutral float-right" title="1.1.4.1.2. modopt.opt.cost module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modopt.opt.html" class="btn btn-neutral float-left" title="1.1.4. modopt.opt package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Samuel Farrens
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

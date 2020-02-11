@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1. Plugin Example &mdash; modopt 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2. modopt examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> modopt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modopt.html">1. modopt package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modopt.base.html">1.1.1. modopt.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.np_adjust.html">1.1.1.1.1. modopt.base.np_adjust module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.observable.html">1.1.1.1.2. modopt.base.observable module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.transform.html">1.1.1.1.3. modopt.base.transform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.types.html">1.1.1.1.4. modopt.base.types module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.wrappers.html">1.1.1.1.5. modopt.base.wrappers module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.interface.html">1.1.2. modopt.interface package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.errors.html">1.1.2.1.1. modopt.interface.errors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.log.html">1.1.2.1.2. modopt.interface.log module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.math.html">1.1.3. modopt.math package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.convolve.html">1.1.3.1.1. modopt.math.convolve module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.matrix.html">1.1.3.1.2. modopt.math.matrix module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.metrics.html">1.1.3.1.3. modopt.math.metrics module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.stats.html">1.1.3.1.4. modopt.math.stats module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.opt.html">1.1.4. modopt.opt package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.algorithms.html">1.1.4.1.1. modopt.opt.algorithms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.cost.html">1.1.4.1.2. modopt.opt.cost module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.gradient.html">1.1.4.1.3. modopt.opt.gradient module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.linear.html">1.1.4.1.4. modopt.opt.linear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.proximity.html">1.1.4.1.5. modopt.opt.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.reweight.html">1.1.4.1.6. modopt.opt.reweight module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.plot.html">1.1.5. modopt.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.plot.cost_plot.html">1.1.5.1.1. modopt.plot.cost_plot module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.signal.html">1.1.6. modopt.signal package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.filter.html">1.1.6.1.1. modopt.signal.filter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.noise.html">1.1.6.1.2. modopt.signal.noise module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.positivity.html">1.1.6.1.3. modopt.signal.positivity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.svd.html">1.1.6.1.4. modopt.signal.svd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.validation.html">1.1.6.1.5. modopt.signal.validation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.wavelet.html">1.1.6.1.6. modopt.signal.wavelet module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.info.html">1.2.1. modopt.info module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="examples.html">2. modopt examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Plugin Example</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">modopt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="examples.html"><span class="section-number">2. </span>modopt examples</a> &raquo;</li>
+        
+      <li><span class="section-number">2.1. </span>Plugin Example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plugin_example.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugin-example">
+<h1><span class="section-number">2.1. </span>Plugin Example<a class="headerlink" href="#plugin-example" title="Permalink to this headline">¶</a></h1>
+<p>This is a quick example demonstrating the use of ModOpt in the context
+of a PySAP plugin. In this example the Forward Backward algorithm from
+ModOpt is used to find the best fitting line to a set of data points.</p>
+<hr class="docutils" />
+<p>First we import the required packages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">modopt</span> <span class="kn">import</span> <span class="n">opt</span>
+</pre></div>
+</div>
+<p>Then we define a couple of utility functions for the puroposes of this
+example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">regression_plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Plot data points and a proposed fit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#19C3F5&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)]):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FF4F5B&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Best Fit Line&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">y_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Equation of a polynomial line.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([(</span><span class="n">a_i</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">a_i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">size</span><span class="p">))])</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="the-problem">
+<h2><span class="section-number">2.1.1. </span>The Problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
+<p>Image we have the following set of data points and we want to find the
+best fitting 3<span class="math notranslate nohighlight">\(^{\textrm{rd}}\)</span> degree polynomial line.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># A range of positions on the x-axis</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+
+<span class="c1"># A set of positions on the y-axis</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.486</span><span class="p">,</span> <span class="mf">0.866</span><span class="p">,</span> <span class="mf">0.944</span><span class="p">,</span> <span class="mf">1.144</span><span class="p">,</span> <span class="mf">1.103</span><span class="p">,</span> <span class="mf">1.202</span><span class="p">,</span> <span class="mf">1.166</span><span class="p">,</span> <span class="mf">1.191</span><span class="p">,</span> <span class="mf">1.124</span><span class="p">,</span> <span class="mf">1.095</span><span class="p">,</span> <span class="mf">1.122</span><span class="p">,</span> <span class="mf">1.102</span><span class="p">,</span> <span class="mf">1.099</span><span class="p">,</span> <span class="mf">1.017</span><span class="p">,</span>
+              <span class="mf">1.111</span><span class="p">,</span> <span class="mf">1.117</span><span class="p">,</span> <span class="mf">1.152</span><span class="p">,</span> <span class="mf">1.265</span><span class="p">,</span> <span class="mf">1.380</span><span class="p">,</span> <span class="mf">1.575</span><span class="p">,</span> <span class="mf">1.857</span><span class="p">])</span>
+
+<span class="c1"># Plot the points</span>
+<span class="n">regression_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="_images/output_5_0.png" src="_images/output_5_0.png" />
+<p>This corresponds to solving the inverse problem</p>
+<div class="math notranslate nohighlight">
+\[y = Ha\]</div>
+<p>where <span class="math notranslate nohighlight">\(y\)</span> are the points on the y-axis, <span class="math notranslate nohighlight">\(H\)</span> is a matirx
+coposed of the points in the x-axis</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>and <span class="math notranslate nohighlight">\(a\)</span> is a model describing the best fit line that we aim to
+recover.</p>
+<blockquote>
+<div><p>Note: We could easily solve this problem analytically.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="modopt-solution">
+<h2><span class="section-number">2.1.2. </span>ModOpt solution<a class="headerlink" href="#modopt-solution" title="Permalink to this headline">¶</a></h2>
+<p>Let’s attempt to solve this problem using the Forward Backward algorithm
+implemented in ModOpt in a few simple steps.</p>
+<div class="section" id="step-1-set-an-initial-guess-for-a">
+<h3><span class="section-number">2.1.2.1. </span>Step 1: Set an initial guess for <span class="math notranslate nohighlight">\(a\)</span><a class="headerlink" href="#step-1-set-an-initial-guess-for-a" title="Permalink to this headline">¶</a></h3>
+<p>We will start asumming <span class="math notranslate nohighlight">\(a\)</span> is a vector of zeros, which is
+obviously a very bad fit to the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">regression_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a_0</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="_images/output_9_0.png" src="_images/output_9_0.png" />
+</div>
+<div class="section" id="step-2-define-a-gradient-operator-for-the-problem">
+<h3><span class="section-number">2.1.2.2. </span>Step 2: Define a gradient operator for the problem<a class="headerlink" href="#step-2-define-a-gradient-operator-for-the-problem" title="Permalink to this headline">¶</a></h3>
+<p>For this problem we can use the basic gradient provided in ModOpt</p>
+<div class="math notranslate nohighlight">
+\[\nabla F(x) = H^T(Hx - y)\]</div>
+<p>we simply need to define the operations of <span class="math notranslate nohighlight">\(H\)</span> and <span class="math notranslate nohighlight">\(H^T\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grad_op</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">gradient</span><span class="o">.</span><span class="n">GradBasic</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="n">Making</span> <span class="nb">input</span> <span class="n">data</span> <span class="n">immutable</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-define-a-proximity-operator-for-the-algorithm">
+<h3><span class="section-number">2.1.2.3. </span>Step 3: Define a proximity operator for the algorithm<a class="headerlink" href="#step-3-define-a-proximity-operator-for-the-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>Since we don’t need to implement any regularisation we simply set the
+identity operator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">prox_op</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">proximity</span><span class="o">.</span><span class="n">IdentityProx</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-4-pass-everything-to-the-algorithm">
+<h3><span class="section-number">2.1.2.4. </span>Step 4: Pass everything to the algorithm<a class="headerlink" href="#step-4-pass-everything-to-the-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>Here we pass the initial guess for <span class="math notranslate nohighlight">\(a\)</span> along with the gradient and
+proximity operators we defined. We also specify a value for the
+<span class="math notranslate nohighlight">\(\beta\)</span> parameter in the Forward Backward algorithm. Finally, we
+specify that we want a maximum of 500 iterations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alg</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">algorithms</span><span class="o">.</span><span class="n">ForwardBackward</span><span class="p">(</span><span class="n">a_0</span><span class="p">,</span> <span class="n">grad_op</span><span class="p">,</span> <span class="n">prox_op</span><span class="p">,</span> <span class="n">beta_param</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">auto_iterate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">alg</span><span class="o">.</span><span class="n">iterate</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">500</span> <span class="n">of</span> <span class="mi">500</span><span class="p">)</span> <span class="o">|</span><span class="c1">######################| Elapsed Time: 0:00:00 Time:  0:00:00</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">1</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">6.931639464572723</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">6.931639464572723</span>
+
+ <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">2</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">3.4179113043303198</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">3.4179113043303198</span>
+
+ <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">3</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">1.7894732608136656</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">1.7894732608136656</span>
+
+ <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">4</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">0.8712577337041495</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">0.8712577337041495</span>
+
+ <span class="o">-</span> <span class="n">CONVERGENCE</span> <span class="n">TEST</span> <span class="o">-</span>
+ <span class="o">-</span> <span class="n">CHANGE</span> <span class="n">IN</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">2.8897396205130526</span>
+
+<span class="o">...</span>
+
+ <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">499</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">0.05534231539479718</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">0.05534231539479718</span>
+
+ <span class="o">-</span> <span class="n">ITERATION</span><span class="p">:</span> <span class="mi">500</span>
+ <span class="o">-</span> <span class="n">DATA</span> <span class="n">FIDELITY</span> <span class="p">(</span><span class="n">X</span><span class="p">):</span> <span class="mf">0.05498126500595005</span>
+ <span class="o">-</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">0.05498126500595005</span>
+
+ <span class="o">-</span> <span class="n">CONVERGENCE</span> <span class="n">TEST</span> <span class="o">-</span>
+ <span class="o">-</span> <span class="n">CHANGE</span> <span class="n">IN</span> <span class="n">COST</span><span class="p">:</span> <span class="mf">0.013163437152771431</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-5-extract-the-final-result">
+<h3><span class="section-number">2.1.2.5. </span>Step 5: Extract the final result<a class="headerlink" href="#step-5-extract-the-final-result" title="Permalink to this headline">¶</a></h3>
+<p>Once the algorithm has finished running we take the final result. We can
+see that it’s a pretty good fit!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">alg</span><span class="o">.</span><span class="n">x_final</span>
+
+<span class="n">regression_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="_images/output_17_0.png" src="_images/output_17_0.png" />
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pysap-plugin">
+<h2><span class="section-number">2.1.3. </span>PySAP Plugin<a class="headerlink" href="#pysap-plugin" title="Permalink to this headline">¶</a></h2>
+<p>Now imagine we want to implement the above solution as a PySAP plugin.
+To do so we would first need to is create a new repository using the
+PySAP plugin template (<a class="reference external" href="https://github.com/CEA-COSMIC/pysap-extplugin">https://github.com/CEA-COSMIC/pysap-extplugin</a>).</p>
+<p>Afterwards, we could package our solution as a more user friendly
+function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">poly_fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+
+    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">a_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">grad_op</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">gradient</span><span class="o">.</span><span class="n">GradBasic</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+    <span class="n">prox_op</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">proximity</span><span class="o">.</span><span class="n">IdentityProx</span><span class="p">()</span>
+    <span class="n">cost_op</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">cost</span><span class="o">.</span><span class="n">costObj</span><span class="p">(</span><span class="n">operators</span><span class="o">=</span><span class="p">[</span><span class="n">grad_op</span><span class="p">,</span> <span class="n">prox_op</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">alg</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">algorithms</span><span class="o">.</span><span class="n">ForwardBackward</span><span class="p">(</span><span class="n">a_0</span><span class="p">,</span> <span class="n">grad_op</span><span class="p">,</span> <span class="n">prox_op</span><span class="p">,</span> <span class="n">cost_op</span><span class="p">,</span> <span class="n">beta_param</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">auto_iterate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                         <span class="n">progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">alg</span><span class="o">.</span><span class="n">iterate</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">alg</span><span class="o">.</span><span class="n">x_final</span>
+</pre></div>
+</div>
+<p>Once the plugin (let’s call it foo) was integrated it would be possible
+to call this function as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysap.plugins.foo</span> <span class="kn">import</span> <span class="n">poly_fit</span>
+</pre></div>
+</div>
+<p>Then we could use this function to fit our data directly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_new</span> <span class="o">=</span> <span class="n">poly_fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">regression_plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a_new</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="_images/output_21_0.png" src="_images/output_21_0.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="examples.html" class="btn btn-neutral float-left" title="2. modopt examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Samuel Farrens
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

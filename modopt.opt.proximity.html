@@ -1,0 +1,1159 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1.4.1.5. modopt.opt.proximity module &mdash; modopt 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.1.4.1.6. modopt.opt.reweight module" href="modopt.opt.reweight.html" />
+    <link rel="prev" title="1.1.4.1.4. modopt.opt.linear module" href="modopt.opt.linear.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> modopt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modopt.html">1. modopt package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="modopt.base.html">1.1.1. modopt.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.np_adjust.html">1.1.1.1.1. modopt.base.np_adjust module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.observable.html">1.1.1.1.2. modopt.base.observable module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.transform.html">1.1.1.1.3. modopt.base.transform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.types.html">1.1.1.1.4. modopt.base.types module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.base.wrappers.html">1.1.1.1.5. modopt.base.wrappers module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.interface.html">1.1.2. modopt.interface package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.errors.html">1.1.2.1.1. modopt.interface.errors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.interface.log.html">1.1.2.1.2. modopt.interface.log module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.math.html">1.1.3. modopt.math package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.convolve.html">1.1.3.1.1. modopt.math.convolve module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.matrix.html">1.1.3.1.2. modopt.math.matrix module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.metrics.html">1.1.3.1.3. modopt.math.metrics module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.math.stats.html">1.1.3.1.4. modopt.math.stats module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="modopt.opt.html">1.1.4. modopt.opt package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.algorithms.html">1.1.4.1.1. modopt.opt.algorithms module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.cost.html">1.1.4.1.2. modopt.opt.cost module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.gradient.html">1.1.4.1.3. modopt.opt.gradient module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.linear.html">1.1.4.1.4. modopt.opt.linear module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.4.1.5. modopt.opt.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.opt.reweight.html">1.1.4.1.6. modopt.opt.reweight module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.plot.html">1.1.5. modopt.plot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.plot.cost_plot.html">1.1.5.1.1. modopt.plot.cost_plot module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.signal.html">1.1.6. modopt.signal package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.filter.html">1.1.6.1.1. modopt.signal.filter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.noise.html">1.1.6.1.2. modopt.signal.noise module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.positivity.html">1.1.6.1.3. modopt.signal.positivity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.svd.html">1.1.6.1.4. modopt.signal.svd module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.validation.html">1.1.6.1.5. modopt.signal.validation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modopt.signal.wavelet.html">1.1.6.1.6. modopt.signal.wavelet module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modopt.info.html">1.2.1. modopt.info module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">2. modopt examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin_example.html">2.1. Plugin Example</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">modopt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modopt.html"><span class="section-number">1. </span>modopt package</a> &raquo;</li>
+        
+          <li><a href="modopt.opt.html"><span class="section-number">1.1.4. </span>modopt.opt package</a> &raquo;</li>
+        
+      <li><span class="section-number">1.1.4.1.5. </span>modopt.opt.proximity module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modopt.opt.proximity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-modopt.opt.proximity">
+<span id="modopt-opt-proximity-module"></span><h1><span class="section-number">1.1.4.1.5. </span>modopt.opt.proximity module<a class="headerlink" href="#module-modopt.opt.proximity" title="Permalink to this headline">¶</a></h1>
+<p>PROXIMITY OPERATORS</p>
+<p>This module contains classes of proximity operators for optimisation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Samuel Farrens &lt;<a class="reference external" href="mailto:samuel&#46;farrens&#37;&#52;&#48;cea&#46;fr">samuel<span>&#46;</span>farrens<span>&#64;</span>cea<span>&#46;</span>fr</a>&gt;</p>
+</dd>
+<dt class="field-even">References</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<p id="bibtex-bibliography-modopt.opt.proximity-0"><dl class="citation">
+<dt class="bibtex label" id="combettes2005"><span class="brackets"><a class="fn-backref" href="#id1">CW05</a></span></dt>
+<dd><p>Patrick L. Combettes and ValÃ©rie R. Wajs. Signal recovery by proximal forward-backward splitting. <em>Multiscale Modeling &amp; Simulation</em>, 4(4):1168–1200, 2005. URL: <a class="reference external" href="https://doi.org/10.1137/050626090">https://doi.org/10.1137/050626090</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1137/050626090">arXiv:https://doi.org/10.1137/050626090</a>, <a class="reference external" href="https://doi.org/10.1137/050626090">doi:10.1137/050626090</a>.</p>
+</dd>
+<dt class="bibtex label" id="figueiredo2014"><span class="brackets">FN14</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>Mario A. T. Figueiredo and Robert D. Nowak. Sparse estimation with strongly correlated variables using ordered weighted l1 regularization. <em>arXiv e-prints</em>, pages arXiv:1409.4005, Sep 2014. <a class="reference external" href="https://arxiv.org/abs/1409.4005">arXiv:1409.4005</a>.</p>
+</dd>
+<dt class="bibtex label" id="mcdonald2014"><span class="brackets">MPS14</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>Andrew M. McDonald, Massimiliano Pontil, and Dimitris Stamos. New perspectives on k-support and cluster norms. <em>arXiv e-prints</em>, pages arXiv:1403.1481, Mar 2014. <a class="reference external" href="https://arxiv.org/abs/1403.1481">arXiv:1403.1481</a>.</p>
+</dd>
+<dt class="bibtex label" id="yuan2006"><span class="brackets"><a class="fn-backref" href="#id7">YL06</a></span></dt>
+<dd><p>Ming Yuan and Yi Lin. Model selection and estimation in regression with grouped variables. <em>Journal of the Royal Statistical Society Series B</em>, 68:49–67, 02 2006. <a class="reference external" href="https://doi.org/10.1111/j.1467-9868.2005.00532.x">doi:10.1111/j.1467-9868.2005.00532.x</a>.</p>
+</dd>
+<dt class="bibtex label" id="zou2005"><span class="brackets"><a class="fn-backref" href="#id4">ZH05</a></span></dt>
+<dd><p>Hui Zou and Trevor Hastie. Regularization and variable selection via the elastic net (vol b 67, pg 301, 2005). <em>Journal of the Royal Statistical Society Series B</em>, 67:768–768, 02 2005. <a class="reference external" href="https://doi.org/10.1111/j.1467-9868.2005.00527.x">doi:10.1111/j.1467-9868.2005.00527.x</a>.</p>
+</dd>
+</dl>
+</p>
+<dl class="class">
+<dt id="modopt.opt.proximity.ProximityParent">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">ProximityParent</code><span class="sig-paren">(</span><em class="sig-param">op</em>, <em class="sig-param">cost</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ProximityParent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ProximityParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Proximity Operator Parent Class</p>
+<p>This class sets the structure for defining proximity operator instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>op</strong> (<em>function</em>) – Callable function that implements the proximity operation</p></li>
+<li><p><strong>cost</strong> (<em>function</em>) – Callable function that implements the proximity contribution to the
+cost</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="modopt.opt.proximity.ProximityParent.op">
+<em class="property">property </em><code class="sig-name descname">op</code><a class="headerlink" href="#modopt.opt.proximity.ProximityParent.op" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear operator</p>
+<p>This method defines the linear operator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.ProximityParent.cost">
+<em class="property">property </em><code class="sig-name descname">cost</code><a class="headerlink" href="#modopt.opt.proximity.ProximityParent.cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cost contribution</p>
+<p>This method defines the proximity operator’s contribution to the total
+cost.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.IdentityProx">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">IdentityProx</code><a class="reference internal" href="_modules/modopt/opt/proximity.html#IdentityProx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.IdentityProx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Identity Proxmity Operator</p>
+<p>This is a dummy class that can be used as a proximity operator.</p>
+<p class="rubric">Notes</p>
+<p>The identity proximity operator contributes <code class="docutils literal notranslate"><span class="pre">0.0</span></code> to the total cost.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.Positivity">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">Positivity</code><a class="reference internal" href="_modules/modopt/opt/proximity.html#Positivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.Positivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Positivity Proximity Operator</p>
+<p>This class defines the positivity proximity operator.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.Positivity._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#Positivity._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.Positivity._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate positivity component of the cost</p>
+<p>This method returns 0 as the posivituty does not contribute to the
+cost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.SparseThreshold">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">SparseThreshold</code><span class="sig-paren">(</span><em class="sig-param">linear</em>, <em class="sig-param">weights</em>, <em class="sig-param">thresh_type='soft'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#SparseThreshold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.SparseThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Threshold Proximity Operator</p>
+<p>This class defines the threshold proximity operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear</strong> (<em>class</em>) – Linear operator class</p></li>
+<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input array of weights</p></li>
+<li><p><strong>thresh_type</strong> (<em>{'hard'</em><em>, </em><em>'soft'}</em><em>, </em><em>optional</em>) – Threshold type (default is ‘soft’)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.SparseThreshold._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#SparseThreshold._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.SparseThreshold._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the input data thresholded by the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Thresholded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.SparseThreshold._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#SparseThreshold._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.SparseThreshold._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate sparsity component of the cost</p>
+<p>This method returns the l1 norm error of the weighted wavelet
+coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Sparsity cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.LowRankMatrix">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">LowRankMatrix</code><span class="sig-paren">(</span><em class="sig-param">thresh</em>, <em class="sig-param">thresh_type='soft'</em>, <em class="sig-param">lowr_type='standard'</em>, <em class="sig-param">operator=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LowRankMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LowRankMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Low-rank Proximity Operator</p>
+<p>This class defines the low-rank proximity operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thresh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Threshold value</p></li>
+<li><p><strong>treshold_type</strong> (<em>{'hard'</em><em>, </em><em>'soft'}</em>) – Threshold type (options are ‘hard’ or ‘soft’, default is ‘soft’)</p></li>
+<li><p><strong>lowr_type</strong> (<em>{'standard'</em><em>, </em><em>'ngole'}</em>) – Low-rank implementation (options are ‘standard’ or ‘ngole’, default is
+‘standard’)</p></li>
+<li><p><strong>operator</strong> (<em>class</em>) – Operator class (‘ngole’ only)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">modopt.opt.proximity</span> <span class="kn">import</span> <span class="n">LowRankMatrix</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span> <span class="o">=</span> <span class="n">LowRankMatrix</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">thresh_type</span><span class="o">=</span><span class="s1">&#39;hard&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span><span class="o">.</span><span class="n">op</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">array([[[  2.73843189,   3.14594066,   3.55344943],</span>
+<span class="go">        [  3.9609582 ,   4.36846698,   4.77597575],</span>
+<span class="go">        [  5.18348452,   5.59099329,   5.99850206]],</span>
+
+<span class="go">       [[  8.07085295,   9.2718846 ,  10.47291625],</span>
+<span class="go">        [ 11.67394789,  12.87497954,  14.07601119],</span>
+<span class="go">        [ 15.27704284,  16.47807449,  17.67910614]]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span><span class="o">.</span><span class="n">cost</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go"> - NUCLEAR NORM (X): 469.391329425</span>
+<span class="go">469.39132942464983</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.LowRankMatrix._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LowRankMatrix._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LowRankMatrix._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the input data after the singular values have been
+thresholded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SVD thresholded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.LowRankMatrix._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LowRankMatrix._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LowRankMatrix._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate low-rank component of the cost</p>
+<p>This method returns the nuclear norm error of the deconvolved data in
+matrix form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Low-rank cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.LinearCompositionProx">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">LinearCompositionProx</code><span class="sig-paren">(</span><em class="sig-param">linear_op</em>, <em class="sig-param">prox_op</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LinearCompositionProx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LinearCompositionProx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Proximity Operator of a Linear Composition</p>
+<p>This class defines the proximity operator of a function given by
+a composition between an initial function whose proximity operator is known
+and an orthogonal linear function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear_op</strong> (<em>class instance</em>) – Linear operator class</p></li>
+<li><p><strong>prox_op</strong> (<em>class instance</em>) – Proximity operator class</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.LinearCompositionProx._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LinearCompositionProx._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LinearCompositionProx._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the scaled version of the proximity operator as
+given by Lemma 2.8 of <a class="bibtex reference internal" href="#combettes2005" id="id1">[CW05]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Result of the scaled proximity operator</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.LinearCompositionProx._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#LinearCompositionProx._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.LinearCompositionProx._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the cost function associated to the composed function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The cost of the associated composed function</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.ProximityCombo">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">ProximityCombo</code><span class="sig-paren">(</span><em class="sig-param">operators</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ProximityCombo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ProximityCombo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Proximity Combo</p>
+<p>This class defines a combined proximity operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operators</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – List of proximity operator class instances</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">modopt.opt.proximity</span> <span class="kn">import</span> <span class="n">ProximityCombo</span><span class="p">,</span> <span class="n">ProximityParent</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">ProximityParent</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">ProximityParent</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">4</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">ProximityCombo</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">op</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">array([4, 16], dtype=object)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">cost</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">40</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.ProximityCombo._check_operators">
+<code class="sig-name descname">_check_operators</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">operators</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ProximityCombo._check_operators"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ProximityCombo._check_operators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check operators</p>
+<p>This method cheks that the input operators and weights are correctly
+formatted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operators</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – List of linear operator class instances</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Operators</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – For invalid input type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.ProximityCombo._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ProximityCombo._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ProximityCombo._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the result of applying all of the proximity
+operators to the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.ProximityCombo._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ProximityCombo._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ProximityCombo._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate combined proximity operator components of the cost</p>
+<p>This method returns the sum of the cost components from each of the
+proximity operators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Combinded cost components</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.OrderedWeightedL1Norm">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">OrderedWeightedL1Norm</code><span class="sig-paren">(</span><em class="sig-param">weights</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#OrderedWeightedL1Norm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.OrderedWeightedL1Norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Ordered Weighted L1 norm proximity operator</p>
+<p>This class defines the OWL proximity operator described in
+<a class="bibtex reference internal" href="#figueiredo2014" id="id2">[FN14]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weights</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Weights values they should be sorted in a non-increasing order</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">modopt.opt.proximity</span> <span class="kn">import</span> <span class="n">OrderedWeightedL1Norm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span>
+<span class="go">array([ 0,  5, 10, 15, 20])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span> <span class="o">=</span> <span class="n">OrderedWeightedL1Norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">weights</span>
+<span class="go">array([4, 3, 2, 1, 0])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">op</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">array([ 0.,  4.,  8., 12., 16.])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">cost</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go"> - OWL NORM (X): 150</span>
+<span class="go">150</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.OrderedWeightedL1Norm._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#OrderedWeightedL1Norm._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.OrderedWeightedL1Norm._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the input data after the a clustering and a
+thresholding. Implements (Eq 24) in <a class="bibtex reference internal" href="#figueiredo2014" id="id3">[FN14]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Thresholded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.OrderedWeightedL1Norm._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#OrderedWeightedL1Norm._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.OrderedWeightedL1Norm._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate OWL component of the cost</p>
+<p>This method returns the ordered weighted l1 norm of the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>OWL cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.Ridge">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">Ridge</code><span class="sig-paren">(</span><em class="sig-param">linear</em>, <em class="sig-param">weights</em>, <em class="sig-param">thresh_type='soft'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#Ridge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.Ridge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>L2-norm Proximity Operator (<cite>i.e.</cite> Shrinkage)</p>
+<p>This class defines the L2-norm proximity operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linear</strong> (<em>class</em>) – Linear operator class</p></li>
+<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input array of weights</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Implements the following equation:</p>
+<div class="math notranslate nohighlight">
+\[prox(y) = \underset{x \in \mathbb{C}^N}{argmin} 0.5 \|x-y\||_2^2 +
+\alpha\|x\|_2^2\]</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.Ridge._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#Ridge._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.Ridge._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator Method</p>
+<p>This method returns the input data shrinked by the weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Thresholded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.Ridge._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#Ridge._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.Ridge._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate Ridge component of the cost</p>
+<p>This method returns the l2 norm error of the weighted wavelet
+coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Sparsity cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.ElasticNet">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">ElasticNet</code><span class="sig-paren">(</span><em class="sig-param">linear</em>, <em class="sig-param">alpha</em>, <em class="sig-param">beta</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ElasticNet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ElasticNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Elastic Net</p>
+<p>This class defines the Elastic net proximity operator, which is  a
+linear combination between L2 and L1 norm proximity operators,
+described in <a class="bibtex reference internal" href="#zou2005" id="id4">[ZH05]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Weights for the L2 norm</p></li>
+<li><p><strong>beta</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Weights for the L1 norm</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Implements the following equation:</p>
+<div class="math notranslate nohighlight">
+\[prox(y) = \underset{x \in \mathbb{C}^N}{argmin} 0.5 \|x-y\||_2^2 +
+\alpha\|x\|_2^2 + beta*||x||_1\]</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.ElasticNet._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ElasticNet._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ElasticNet._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the input data shrinked by the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Thresholded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.ElasticNet._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#ElasticNet._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.ElasticNet._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate Ridge component of the cost</p>
+<p>This method returns the l2 norm error of the weighted wavelet
+coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Sparsity cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.KSupportNorm">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">KSupportNorm</code><span class="sig-paren">(</span><em class="sig-param">beta</em>, <em class="sig-param">k_value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>K-support Norm Proximity Operator</p>
+<p>This class defines the squarred K-support norm proximity operator
+described in <a class="bibtex reference internal" href="#mcdonald2014" id="id5">[MPS14]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thresh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Threshold value</p></li>
+<li><p><strong>k_value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Hyper-parameter of the k-support norm, equivalent to the cardinality
+value for the overlapping group lasso. k should included in
+{1, …, dim(input_vector)}</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The k-support norm can be seen as an extension to the group-LASSO with
+overlaps with groups of cardianlity at most equal to k.
+When k = 1 the norm is equivalent to the L1-norm.
+When k = dimension of the input vector than the norm is equivalent to the
+L2-norm.
+The dual of this norm correspond to the sum of the k biggest input entries.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">modopt.opt.proximity</span> <span class="kn">import</span> <span class="n">KSupportNorm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span>
+<span class="go">array([ 0,  5, 10, 15, 20])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span> <span class="o">=</span> <span class="n">KSupportNorm</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">k_value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">op</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">array([ 0.,  0.,  0., 0., 5.])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">cost</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go"> - OWL NORM (X): 7500.0</span>
+<span class="go">7500.0</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm.k_value">
+<em class="property">property </em><code class="sig-name descname">k_value</code><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm.k_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>k value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._compute_theta">
+<code class="sig-name descname">_compute_theta</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">input_data</em>, <em class="sig-param">alpha</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._compute_theta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._compute_theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute theta</p>
+<p>This method computes theta from Corollary 16:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\theta_i &amp;=
+\begin{cases}
+1, &amp; \text{if} \, \alpha \vert w_i \vert - 2 \lambda &gt; 1\\
+\alpha \vert w_i \vert - 2 \lambda, &amp; \text{if} \
+1 \geq \alpha \vert w_i \vert -2 \lambda \geq 0 \\
+0, &amp; \text{if} \, 0 &gt; \alpha \vert w_i \vert - 2 \lambda
+\end{cases}
+\end{align*}\end{split}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Parameter choosen such that sum(theta_i) = k</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Potential extra factor comming from the optimization process
+(default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>theta</strong> – Same size as w and each component is equal to theta_i</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._interpolate">
+<code class="sig-name descname">_interpolate</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">alpha_0</em>, <em class="sig-param">alpha_1</em>, <em class="sig-param">sum_0</em>, <em class="sig-param">sum_1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._interpolate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear interpolation of alpha</p>
+<p>This method estimats alpha* such that sum(theta(alpha*))=k via a linear
+interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_0</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – A value for wich sum(theta(alpha_0)) &lt;= k</p></li>
+<li><p><strong>alpha_1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – A value for which sum(theta(alpha_1)) &lt;= k</p></li>
+<li><p><strong>sum_0</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Value of sum(theta(alpha_0))</p></li>
+<li><p><strong>sum_1</strong> – Value of sum(theta(alpha_0))</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An interpolation for which sum(theta(alpha_star)) = k</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._binary_search">
+<code class="sig-name descname">_binary_search</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">alpha</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._binary_search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._binary_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary search method</p>
+<p>This method finds the coordinate of alpha (i) such that
+sum(theta(alpha[i])) =&lt; k and sum(theta(alpha[i+1])) &gt;= k via binary
+search method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – absolute value of the input data</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Array same size as the input data</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Potential extra factor comming from the optimization process
+(default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The index where: sum(theta(alpha[index])) &lt;= k and
+sum(theta(alpha[index+1])) &gt;= k, The alpha value for which
+sum(theta(alpha[index])) &lt;= k,  The alpha value for which
+sum(theta(alpha[index+1])) &gt;= k, Value of sum(theta(alpha[index])),
+Value of sum(theta(alpha[index + 1]))</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)">tuple</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._find_alpha">
+<code class="sig-name descname">_find_alpha</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">input_data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._find_alpha"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._find_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find alpha value to compute theta</p>
+<p>This method aim at finding alpha such that sum(theta(alpha)) = k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Potential extra factor for the weights (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An interpolation of alpha such that sum(theta(alpha)) = k</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the proximity operator of the squared k-support
+norm. Implements (Alg. 1) in <a class="bibtex reference internal" href="#mcdonald2014" id="id6">[MPS14]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Proximal map</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._find_q">
+<code class="sig-name descname">_find_q</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">sorted_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._find_q"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._find_q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find q index value</p>
+<p>This method finds the value of q such that:</p>
+<p>sorted_data[q] &gt;= sum(sorted_data[q+1:]) / (k - q)&gt;= sorted_data[q+1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sorted_data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Absolute value of the input data sorted in a non-decreasing order</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index such that sorted_data[q] &gt;= sum(sorted_data[q+1:]) /
+(k - q)&gt;= sorted_data[q+1]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.KSupportNorm._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#KSupportNorm._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.KSupportNorm._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate OWL component of the cost</p>
+<p>This method returns the ordered weighted l1 norm of the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>OWL cost component</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="modopt.opt.proximity.GroupLASSO">
+<em class="property">class </em><code class="sig-prename descclassname">modopt.opt.proximity.</code><code class="sig-name descname">GroupLASSO</code><span class="sig-paren">(</span><em class="sig-param">weights</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#GroupLASSO"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.GroupLASSO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">modopt.opt.proximity.ProximityParent</span></code></a></p>
+<p>Group LASSO norm proximity</p>
+<p>This class implements the proximity operator of the group-lasso
+regularization as defined in <a class="bibtex reference internal" href="#yuan2006" id="id7">[YL06]</a>, with groups dimension
+being the first dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weights</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input array of weights</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">modopt.opt.proximity</span> <span class="kn">import</span> <span class="n">GroupLASSO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">array([[ 0,  1,  2,  3,  4],</span>
+<span class="go">       [ 5,  6,  7,  8,  9],</span>
+<span class="go">       [10, 11, 12, 13, 14]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span> <span class="o">=</span> <span class="n">GroupLASSO</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">op</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">array([[ 0.        ,  0.76133281,  1.5725177 ,  2.42145809,  3.29895251],</span>
+<span class="go">       [ 3.65835921,  4.56799689,  5.50381195,  6.45722157,  7.42264316],</span>
+<span class="go">       [ 7.31671843,  8.37466096,  9.4351062 , 10.49298505, 11.5463338 ]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prox_op</span><span class="o">.</span><span class="n">cost</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">     211.37821733946427</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#modopt.opt.proximity.ProximityParent" title="modopt.opt.proximity.ProximityParent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityParent</span></code></a></dt><dd><p>parent class</p>
+</dd>
+</dl>
+</div>
+<dl class="method">
+<dt id="modopt.opt.proximity.GroupLASSO._op_method">
+<code class="sig-name descname">_op_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em>, <em class="sig-param">extra_factor=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#GroupLASSO._op_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.GroupLASSO._op_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operator</p>
+<p>This method returns the input data thresholded by the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input data array</p></li>
+<li><p><strong>extra_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Additional multiplication factor (default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>With proximal of GroupLASSO regularization</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="modopt.opt.proximity.GroupLASSO._cost_method">
+<code class="sig-name descname">_cost_method</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/modopt/opt/proximity.html#GroupLASSO._cost_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#modopt.opt.proximity.GroupLASSO._cost_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cost function</p>
+<p>This method calculate the cost function of the proximable part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><em>numpy.ndarray</em></a>) – Input array of the sparse code</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The cost of GroupLASSO regularizer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modopt.opt.reweight.html" class="btn btn-neutral float-right" title="1.1.4.1.6. modopt.opt.reweight module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modopt.opt.linear.html" class="btn btn-neutral float-left" title="1.1.4.1.4. modopt.opt.linear module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Samuel Farrens
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
